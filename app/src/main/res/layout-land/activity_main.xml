@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.eigenaar.mrpotatohead.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="200dp"
+                android:layout_height="46dp"
+                android:layout_marginEnd="55dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:inputType="textPersonName"
+                android:text="Mr. Potato Head"
+                android:textSize="12pt"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5">
+
+                <ImageView
+                    android:id="@+id/body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/body"
+                    tools:layout_editor_absoluteX="57dp"
+                    tools:layout_editor_absoluteY="68dp" />
+
+                <ImageView
+                    android:id="@+id/arms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/arms"
+                    tools:layout_editor_absoluteX="57dp"
+                    tools:layout_editor_absoluteY="68dp" />
+
+                <ImageView
+                    android:id="@+id/ears"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ears"
+                    tools:layout_editor_absoluteX="57dp"
+                    tools:layout_editor_absoluteY="68dp" />
+
+                <ImageView
+                    android:id="@+id/eyebrows"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/eyebrows"
+                    tools:layout_editor_absoluteX="57dp"
+                    tools:layout_editor_absoluteY="68dp" />
+
+                <ImageView
+                    android:id="@+id/eyes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/eyes"
+                    tools:layout_editor_absoluteX="57dp"
+                    tools:layout_editor_absoluteY="68dp" />
+
+                <ImageView
+                    android:id="@+id/glasses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/glasses"
+                    tools:layout_editor_absoluteX="57dp"
+                    tools:layout_editor_absoluteY="68dp" />
+
+                <ImageView
+                    android:id="@+id/hat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/hat"
+                    tools:layout_editor_absoluteX="57dp"
+                    tools:layout_editor_absoluteY="68dp" />
+
+                <ImageView
+                    android:id="@+id/mouth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/mouth"
+                    tools:layout_editor_absoluteX="57dp"
+                    tools:layout_editor_absoluteY="68dp" />
+
+                <ImageView
+                    android:id="@+id/mustache"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/mustache"
+                    tools:layout_editor_absoluteX="57dp"
+                    tools:layout_editor_absoluteY="68dp" />
+
+                <ImageView
+                    android:id="@+id/nose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/nose"
+                    tools:layout_editor_absoluteX="57dp"
+                    tools:layout_editor_absoluteY="68dp" />
+
+                <ImageView
+                    android:id="@+id/shoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/shoes"
+                    tools:layout_editor_absoluteX="57dp" />
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:onClick="checkClicked"
+                android:text="eyes"
+                app:layout_constraintStart_toStartOf="@+id/checkBox3"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkClicked"
+                android:text="glasses"
+                app:layout_constraintStart_toStartOf="@+id/checkBox4"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkClicked"
+                android:text="eyebrows"
+                app:layout_constraintStart_toStartOf="@+id/checkBox2"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkClicked"
+                android:text="mustache"
+                app:layout_constraintStart_toStartOf="@+id/checkBox5"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="77dp"
+                android:onClick="checkClicked"
+                android:text="ears"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+            <CheckBox
+                android:id="@+id/checkBox6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkClicked"
+                android:text="nose"
+                app:layout_constraintBottom_toTopOf="@+id/checkBox7"
+                app:layout_constraintStart_toStartOf="@+id/checkBox7" />
+
+            <CheckBox
+                android:id="@+id/checkBox7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkClicked"
+                android:text="mouth"
+                app:layout_constraintStart_toStartOf="@+id/checkBox8"
+                app:layout_constraintTop_toTopOf="@+id/checkBox3" />
+
+            <CheckBox
+                android:id="@+id/checkBox8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkClicked"
+                android:text="arms"
+                app:layout_constraintStart_toStartOf="@+id/checkBox9"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
+
+            <CheckBox
+                android:id="@+id/checkBox9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkClicked"
+                android:text="hat"
+                app:layout_constraintStart_toStartOf="@+id/checkBox10"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
+
+            <CheckBox
+                android:id="@+id/checkBox10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="49dp"
+                android:layout_marginStart="45dp"
+                android:onClick="checkClicked"
+                android:text="shoes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/checkBox2"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox9" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="161dp"
+                android:text="Change how Mr. Potato Head looks by clicking on the boxes:"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+</LinearLayout>
