@@ -35,6 +35,29 @@ public class MainActivity extends AppCompatActivity {
                 findViewById(R.id.shoes)};
     }
 
+    public void onSaveInstanceState(Bundle outState) {
+
+        // Always call this
+        super.onSaveInstanceState(outState);
+
+        // Save image name and if it is shown or not
+        for (int i = 0; i < images_name.length; i++){
+            outState.putInt(images_name[i], images_id[i].getVisibility());
+        }
+    }
+
+    public void onRestoreInstanceState (Bundle inState){
+
+        // Always call this
+        super.onRestoreInstanceState(inState);
+
+        // Reload state of image
+        for (int i = 0; i < images_name.length; i++){
+            images_id[i].setVisibility(inState.getInt(images_name[i]));
+        }
+
+    }
+
     public void checkClicked(View v) {
         CheckBox checkbox = (CheckBox) v;
         String clicked_item = checkbox.getText().toString();
