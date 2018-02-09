@@ -11,17 +11,16 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     // To store all the name and id's of the images
-    String[] images_name ={"eyes", "eyebrows", "glasses", "mustache", "ears", "nose", "mouth", "arms", "hat", "shoes"};
+    String[] images_name ={"eyes", "eyebrows", "glasses", "mustache", "ears", "nose", "mouth",
+                            "arms", "hat", "shoes"};
     ImageView[] images_id;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Store all id's only one time (in the same order!)
+        // Store all id's only one time (in the same order as the names!)
         images_id = new ImageView[]{
                 findViewById(R.id.eyes),
                 findViewById(R.id.eyebrows),
@@ -55,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < images_name.length; i++){
             images_id[i].setVisibility(inState.getInt(images_name[i]));
         }
-
     }
 
     public void checkClicked(View v) {
@@ -63,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
         String clicked_item = checkbox.getText().toString();
 
         for (int i = 0; i < images_name.length; i++){
+
+            // Change only the state of the box that is (un)clicked
             if (images_name[i].equals(clicked_item)){
                 if (checkbox.isChecked()) {
                     images_id[i].setVisibility(View.VISIBLE);
